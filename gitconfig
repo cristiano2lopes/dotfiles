@@ -1,0 +1,17 @@
+[user]
+	name = Cristiano Lopes
+	email = e.mail@cristianolopes.eu
+[color]
+	ui = true
+[core]
+	editor = vim
+	excludesfile = ~/.my_gitignore
+	pager = diff-so-fancy | less --tabs=4
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
