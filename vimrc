@@ -101,6 +101,10 @@ set splitbelow
 let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
+" Section  FZF {{{
+nnoremap <C-p> :Files<Cr>
+nnoremap <C-e> :History<Cr>
+" }}}
 " Section  Dash {{{
 nmap <silent> <leader>d <Plug>DashSearch
 " }}}
