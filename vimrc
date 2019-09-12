@@ -13,6 +13,7 @@
  Plug 'wakatime/vim-wakatime'
  Plug '/usr/local/opt/fzf'
  Plug 'junegunn/fzf.vim'
+ Plug 'tpope/vim-sleuth'
 
  call plug#end()
 " }}}
@@ -20,6 +21,7 @@
 filetype plugin indent on
 syntax enable
 runtime macros/matchit.vim
+let mapleader =" "
 
 "Section UI {{{
 "
@@ -43,8 +45,6 @@ set backspace=indent,eol,start
 nnoremap <Leader>dd :set background=dark<Cr>
 nnoremap <Leader>ll :set background=light<Cr>
 nmap <leader>ii :set list!<CR>
-"set statusline=%(File:%t\ %)\%(Buf:%n\ Tl:%L\ L\|C:%l,%c%)\%(\ Lang:%Y%)
-set t_Co=256
 "}}}
 "Section Folding {{{
 set foldmethod=indent
@@ -61,17 +61,17 @@ set encoding=utf-8
 set tags=./tags;$HOME
 set undofile
 set undodir=$HOME/.vim_files
-nnoremap <leader>` <c-^>
+nnoremap <leader><leader> <c-^>
 " }}}
 " Section Search {{{
 set showmatch
 set incsearch
-set hlsearch 
-set smartcase 
+set hlsearch
+set smartcase
 set ignorecase
 nnoremap / /\v
 vnoremap / /\v
-nnoremap <leader>\ :noh<cr>
+nnoremap <leader>/ :noh<cr>
 " }}}
 " Section GUI{{{
 if has('gui_running')

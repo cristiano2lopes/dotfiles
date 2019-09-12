@@ -7,11 +7,14 @@ export ANDROID_HOME=/Users/Cristiano/Library/Android/sdk
 #Path
 OLD_PATH=$PATH
 pathdirstoadd=(
-    /Applications/Postgres.app/Contents/Versions/latest/bin
     /usr/local/heroku/bin
     /usr/local/bin
     /usr/local/sbin
-    /Users/Cristiano/Library/Android/sdk/platform-tools
+    /Applications/Postgres.app/Contents/Versions/latest/bin
+    $ANDROID_HOME/platform-tools
+    $ANDROID_HOME/emulator
+    $ANDROID_HOME/tools
+    $ANDROID_HOME/tools/bin
     $HOME/Documents/projects/personal/scripts
 )
 for dir in $pathdirstoadd; do
