@@ -26,6 +26,7 @@ let mapleader =" "
 "Section UI {{{
 "
 colorscheme solarized
+set lazyredraw
 set ruler
 set colorcolumn=80
 set wildmenu
@@ -75,13 +76,8 @@ nnoremap <leader>/ :noh<cr>
 " }}}
 " Section GUI{{{
 if has('gui_running')
-    set guifont=Fira\ Code\ Retina:h13
-    set macligatures
+    set guifont=Ibm\ Plex\ Retina:h12
     set guioptions-=T
-    set guioptions-=r
-    set guioptions-=L
-    set lines=999
-    set columns=9999
 endif
 " }}}
 "Section White Space {{{
