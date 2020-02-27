@@ -18,4 +18,4 @@ bindkey "^R" history-incremental-search-backward
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source /usr/local/opt/asdf/asdf.sh
-
+source /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash

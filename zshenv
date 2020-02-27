@@ -28,7 +28,3 @@ export PATH=$PATH_TO_PREPEND$OLD_PATH
 
 #Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
-
-#Gcloud
-if [ -f '/Users/Cristiano/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Cristiano/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/Cristiano/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Cristiano/google-cloud-sdk/completion.zsh.inc'; fi
