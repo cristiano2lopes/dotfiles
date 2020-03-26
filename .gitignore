@@ -1,10 +1,3 @@
-#Programming
-tags
-.idea
-.git
-.coverage
-htmlcov/
-
 #OSX
 .DS_Store
 .AppleDouble
@@ -19,35 +12,9 @@ Icon
 tags
 tmp/**/*
 
-.tool-versions
-
 #Python Related 
-.python-version
-venv-*/
 __pycache__/
 *.py[cod]
 *.so
-bin/
-build/
-develop-eggs/
-eggs/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-pip-log.txt
-pip-delete-this-directory.txt
-*.mo
-.mr.developer.cfg
-.project
-.pydevproject
-.ropeproject
-*.log
-*.pot
-docs/_build/
 
-.vscode
-
-fastlane/report.xml
+vim/.netrwhist

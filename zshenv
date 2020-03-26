@@ -12,6 +12,7 @@ pathdirstoadd=(
     /usr/local/bin
     /usr/local/sbin
     /Applications/Postgres.app/Contents/Versions/latest/bin
+    /usr/local/opt/mongodb-community@3.6/bin
     $ANDROID_HOME/platform-tools
     $ANDROID_HOME/emulator
     $ANDROID_HOME/tools

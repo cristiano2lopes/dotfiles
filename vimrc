@@ -7,7 +7,6 @@
  Plug 'vim-ruby/vim-ruby'
  Plug 'leshill/vim-json'
  Plug 'pangloss/vim-javascript'
- Plug 'slashmili/alchemist.vim'
 
  Plug 'itchyny/lightline.vim'
  Plug 'rizzatti/dash.vim'
@@ -15,8 +14,7 @@
  Plug 'tpope/vim-sleuth'
  Plug 'mileszs/ack.vim'
  Plug 'dense-analysis/ale'
- Plug '/usr/local/opt/fzf'
- Plug 'junegunn/fzf.vim'
+ Plug 'junegunn/fzf'
 
 
  call plug#end()
@@ -105,8 +103,8 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
 " Section  FZF {{{
-nnoremap <C-p> :Files<Cr>
-nnoremap <C-e> :History<Cr>
+" nnoremap <C-p> :Files<Cr>
+" nnoremap <C-e> :History<Cr>
 " }}}
 " Section  Dash {{{
 nmap <silent> <leader>d <Plug>DashSearch
