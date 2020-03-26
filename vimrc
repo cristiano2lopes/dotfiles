@@ -15,6 +15,7 @@
  Plug 'mileszs/ack.vim'
  Plug 'dense-analysis/ale'
  Plug 'junegunn/fzf'
+ Plug 'junegunn/fzf.vim'
 
 
  call plug#end()
@@ -24,8 +25,6 @@ set nocompatible
 filetype plugin indent on
 syntax enable
 runtime macros/matchit.vim
-let mapleader = " "
-let g:mapleader = " "
 
 "Section UI {{{
 "
@@ -102,10 +101,6 @@ set splitbelow
 let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
-" Section  FZF {{{
-" nnoremap <C-p> :Files<Cr>
-" nnoremap <C-e> :History<Cr>
-" }}}
 " Section  Dash {{{
 nmap <silent> <leader>d <Plug>DashSearch
 " }}}
@@ -132,4 +127,12 @@ au BufRead,BufNewFile *playbook*.yml set filetype=yaml.ansible
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_winsize = 25
+" }}}
+
+" Section  FZF {{{
+nnoremap <C-p> :Files<Cr>
+nnoremap <C-e> :History<Cr>
+nnoremap <leader>mm :Marks<Cr>
+nnoremap <leader>tt :Tags<Cr>
+let g:fzf_layout = { 'window': { 'width': 0.85, 'height': 0.5 } }
 " }}}
