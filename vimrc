@@ -8,7 +8,6 @@
  Plug 'leshill/vim-json'
  Plug 'pangloss/vim-javascript'
 
- Plug 'itchyny/lightline.vim'
  Plug 'rizzatti/dash.vim'
  Plug 'wakatime/vim-wakatime'
  Plug 'tpope/vim-sleuth'
@@ -46,8 +45,11 @@ set visualbell
 set undolevels=10000
 set diffopt+=vertical
 set backspace=indent,eol,start
-nnoremap <Leader>dd :set background=dark<Cr>
-nnoremap <Leader>ll :set background=light<Cr>
+if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+   set background=dark
+else
+  set background=light
+endif
 nmap <leader>ii :set list!<CR>
 "}}} 
 "Section Folding {{{
@@ -97,10 +99,6 @@ set list listchars=tab:»·,trail:·,nbsp:·
 set splitright
 set splitbelow
 "}}}
-" Section Plugins{{{
-let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
 " Section  Dash {{{
 nmap <silent> <leader>d <Plug>DashSearch
 " }}}
@@ -135,4 +133,16 @@ nnoremap <C-e> :History<Cr>
 nnoremap <leader>mm :Marks<Cr>
 nnoremap <leader>tt :Tags<Cr>
 let g:fzf_layout = { 'window': { 'width': 0.85, 'height': 0.5 } }
+" }}}
+
+" Section  Statusline {{{
+set statusline=
+set statusline+=%1*\ %<%F\                                "File+path
+set statusline+=%2*\ %y\                                  "FileType
+set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      "Encoding
+set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
+set statusline+=%4*\ %{&ff}\                              "FileFormat (dos/unix..) 
+set statusline+=%5*\ %{&spelllang}\                       "Spellanguage
+set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             "Rownumber/total (%)
+set statusline+=%9*\ col:%03c\                            "Colnr
 " }}}
