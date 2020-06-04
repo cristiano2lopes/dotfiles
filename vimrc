@@ -8,11 +8,11 @@
  Plug 'leshill/vim-json'
  Plug 'pangloss/vim-javascript'
 
+ Plug 'vim-syntastic/syntastic'
+ Plug 'itchyny/lightline.vim'
  Plug 'rizzatti/dash.vim'
  Plug 'wakatime/vim-wakatime'
  Plug 'tpope/vim-sleuth'
- Plug 'mileszs/ack.vim'
- Plug 'dense-analysis/ale'
  Plug 'junegunn/fzf'
  Plug 'junegunn/fzf.vim'
 
@@ -50,6 +50,8 @@ if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
 else
   set background=light
 endif
+nnoremap <Leader>dd :set background=dark<Cr>
+nnoremap <Leader>ll :set background=light<Cr>
 nmap <leader>ii :set list!<CR>
 "}}} 
 "Section Folding {{{
@@ -99,6 +101,10 @@ set list listchars=tab:»·,trail:·,nbsp:·
 set splitright
 set splitbelow
 "}}}
+" Section Plugins{{{
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
 " Section  Dash {{{
 nmap <silent> <leader>d <Plug>DashSearch
 " }}}
@@ -128,21 +134,9 @@ let g:netrw_winsize = 25
 " }}}
 
 " Section  FZF {{{
-nnoremap <C-p> :Files<Cr>
+nnoremap <C-p> :GFiles<Cr>
 nnoremap <C-e> :History<Cr>
 nnoremap <leader>mm :Marks<Cr>
 nnoremap <leader>tt :Tags<Cr>
 let g:fzf_layout = { 'window': { 'width': 0.85, 'height': 0.5 } }
-" }}}
-
-" Section  Statusline {{{
-set statusline=
-set statusline+=%1*\ %<%F\                                "File+path
-set statusline+=%2*\ %y\                                  "FileType
-set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      "Encoding
-set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
-set statusline+=%4*\ %{&ff}\                              "FileFormat (dos/unix..) 
-set statusline+=%5*\ %{&spelllang}\                       "Spellanguage
-set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             "Rownumber/total (%)
-set statusline+=%9*\ col:%03c\                            "Colnr
 " }}}
