@@ -8,7 +8,7 @@
  Plug 'leshill/vim-json'
  Plug 'pangloss/vim-javascript'
 
- Plug 'vim-syntastic/syntastic'
+ Plug 'dense-analysis/ale'
  Plug 'itchyny/lightline.vim'
  Plug 'rizzatti/dash.vim'
  Plug 'wakatime/vim-wakatime'
@@ -83,7 +83,7 @@ nnoremap <leader>/ :noh<cr>
 " }}}
 " Section GUI{{{
 if has('gui_running')
-    set guifont=JetBrains\ Mono:h13
+    set guifont=IBM\ Plex\ Mono:h13
     set macligatures
     let macvim_hig_shift_movement=1
 endif
@@ -123,6 +123,10 @@ autocmd FileType txt setlocal spell
 autocmd FileType gitcommit setlocal spell
 autocmd FileType gitcommit setlocal textwidth=80
 " }}}
+" Section Elixir {{{
+autocmd FileType elixir setlocal formatprg=mix\ format\ -
+autocmd FileType eelixir setlocal formatprg=mix\ format\ -
+" }}}
 " Section Ansible {{{
 au BufRead,BufNewFile *playbook*.yml set filetype=yaml.ansible
 " }}}
@@ -134,9 +138,9 @@ let g:netrw_winsize = 25
 " }}}
 
 " Section  FZF {{{
-nnoremap <C-p> :GFiles<Cr>
+nnoremap <C-p> :Files<Cr>
 nnoremap <C-e> :History<Cr>
 nnoremap <leader>mm :Marks<Cr>
 nnoremap <leader>tt :Tags<Cr>
-let g:fzf_layout = { 'window': { 'width': 0.85, 'height': 0.5 } }
+let g:fzf_layout = { 'window': { 'width': 0.85, 'height': 0.6 } }
 " }}}
