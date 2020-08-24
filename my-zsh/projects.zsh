@@ -1,10 +1,1 @@
 alias p='cd ~/Documents/projects/'
-
-alias p_satta='~/Documents/projects/satta/'
-alias p_bepretty='~/Documents/projects/bepretty/'
-alias p_wiride='~/Documents/projects/wiride/'
-alias p_easyvino='~/Documents/projects/easyvino/'
-alias p_pilotoapp='~/Documents/projects/pilotoapp/'
-alias p_dotfiles='~/Documents/projects/personal/cristiano_dotfiles/'
-alias p_experiments='~/Documents/projects/personal/experiments/'
-alias p_oss='~/Documents/projects/oss/'

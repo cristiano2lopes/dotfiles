@@ -8,7 +8,6 @@
  Plug 'leshill/vim-json'
  Plug 'pangloss/vim-javascript'
 
- Plug 'dense-analysis/ale'
  Plug 'itchyny/lightline.vim'
  Plug 'rizzatti/dash.vim'
  Plug 'wakatime/vim-wakatime'

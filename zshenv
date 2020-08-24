@@ -1,9 +1,10 @@
 export EDITOR="vim"
-export BEPRETTY_HEROKU_DOMAIN="heroku.bepretty"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export ANDROID_HOME=/Users/Cristiano/Library/Android/sdk
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+
+export BEPRETTY_HEROKU_DOMAIN="heroku.bepretty"
 
 #Path
 OLD_PATH=$PATH
@@ -27,5 +28,13 @@ done
 
 export PATH=$PATH_TO_PREPEND$OLD_PATH
 
-#Elixir
+FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+source /usr/local/opt/asdf/asdf.sh
+source ~/.fzf.zsh
+source ~/.my-zsh/aliases.zsh
+source ~/.my-zsh/projects.zsh
+
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+export FZF_DEFAULT_OPTS='-m --height 50% --border'

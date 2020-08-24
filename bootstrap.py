@@ -11,6 +11,8 @@ files_list = [("ctags", ".ctags"),
               ("my-zsh", ".my-zsh"),
               ("vimrc", ".vimrc"),
               ("psqlrc", ".psqlrc"),
+              ("bat", ".config/bat"),
+              ("starship", ".config/starship.toml"),
               ("vim", ".vim")]
 
 for s, d in files_list:
