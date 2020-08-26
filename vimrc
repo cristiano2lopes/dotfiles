@@ -2,16 +2,18 @@
  call plug#begin('~/.vim_plugins')
 
  Plug 'altercation/vim-colors-solarized'
- Plug 'elixir-editors/vim-elixir'
- Plug 'fatih/vim-go'
- Plug 'vim-ruby/vim-ruby'
- Plug 'leshill/vim-json'
- Plug 'pangloss/vim-javascript'
-
  Plug 'itchyny/lightline.vim'
+
+ Plug 'sheerun/vim-polyglot'
+
+ Plug 'tpope/vim-fugitive'
+ Plug 'tpope/vim-sleuth'
+ Plug 'ludovicchabant/vim-gutentags'
+ Plug 'dense-analysis/ale'
+
  Plug 'rizzatti/dash.vim'
  Plug 'wakatime/vim-wakatime'
- Plug 'tpope/vim-sleuth'
+
  Plug 'junegunn/fzf'
  Plug 'junegunn/fzf.vim'
 
@@ -28,6 +30,7 @@ runtime macros/matchit.vim
 "
 colorscheme solarized
 set lazyredraw
+set ttyfast
 set ruler
 set colorcolumn=80,120
 set wildmenu
@@ -39,6 +42,7 @@ set showcmd
 set showmode
 set laststatus=2
 set number
+set numberwidth=4
 set cursorline
 set visualbell
 set undolevels=10000
@@ -90,6 +94,7 @@ endif
 " }}}
 "Section White Space {{{
 set autoindent
+set cindent
 set smartindent
 set expandtab
 set tabstop=4
