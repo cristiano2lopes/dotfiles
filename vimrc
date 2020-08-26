@@ -79,10 +79,11 @@ set ignorecase
 nnoremap / /\v
 vnoremap / /\v
 nnoremap <leader>/ :noh<cr>
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 " }}}
 " Section GUI{{{
 if has('gui_running')
-    set guifont=IBM\ Plex\ Mono:h13
+    set guifont=IBM\ Plex\ Mono:h14
     set macligatures
     let macvim_hig_shift_movement=1
 endif

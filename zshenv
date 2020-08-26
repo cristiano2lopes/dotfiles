@@ -38,3 +38,4 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_DEFAULT_OPTS='-m --height 50% --border'
+export FZF_ALT_C_COMMAND='find . -maxdepth 1 -type d'
