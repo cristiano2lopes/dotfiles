@@ -30,6 +30,8 @@
 	process = git-lfs filter-process
 [alias]
 	identity = "! git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
+[commit]
+	gpgsign = true
 
 
 [includeIf "gitdir:opensoft/**"]
