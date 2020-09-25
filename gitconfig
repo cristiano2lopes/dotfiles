@@ -2,6 +2,7 @@
 	useConfigOnly = true
 	name = Cristiano Lopes
 	email = e.mail@cristianolopes.eu
+	signingkey = 452F95485B9E4C6E
 [user.work]
 	email = work@cristianolopes.eu
 [user.opensoft]
