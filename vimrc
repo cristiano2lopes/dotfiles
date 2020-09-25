@@ -3,6 +3,7 @@
 
  Plug 'altercation/vim-colors-solarized'
  Plug 'itchyny/lightline.vim'
+ Plug 'junegunn/goyo.vim'
 
  Plug 'sheerun/vim-polyglot'
 
@@ -87,8 +88,7 @@ set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 " }}}
 " Section GUI{{{
 if has('gui_running')
-    set guifont=IBM\ Plex\ Mono:h14
-    set macligatures
+    set guifont=Jetbrains\ Mono:h14
     let macvim_hig_shift_movement=1
 endif
 " }}}

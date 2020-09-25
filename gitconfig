@@ -1,12 +1,19 @@
 [user]
+	useConfigOnly = true
 	name = Cristiano Lopes
 	email = e.mail@cristianolopes.eu
+[user.personal]
+	email = e.mail@cristianolopes.eu
+[user.work]
+	email = work@cristianolopes.eu
+[user.opensoft]
+	email = crlopes@opensoft.pt
 [color]
 	ui = true
 [core]
 	editor = vim
-	excludesfile = ~/.my_gitignore
-	pager = diff-so-fancy | less --tabs=4
+	excludesfile = ~/.my_git_conf/my_gitignore
+	pager = diff-so-fancy | less --tabs=2
 [push]
 	default = simple
 [credential]
@@ -16,3 +23,13 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
+[alias]
+	identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
+
+
+[includeIf "gitdir:opensoft/**"]
+	path = ~/.my_git_conf/opensoft
+[includeIf "gitdir:bepretty/**"]
+	path = ~/.my_git_conf/bepretty
+[includeIf "gitdir:tymber/**"]
+	path = ~/.my_git_conf/tyber
