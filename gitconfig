@@ -2,12 +2,16 @@
 	useConfigOnly = true
 	name = Cristiano Lopes
 	email = e.mail@cristianolopes.eu
-[user.personal]
-	email = e.mail@cristianolopes.eu
 [user.work]
 	email = work@cristianolopes.eu
 [user.opensoft]
 	email = crlopes@opensoft.pt
+[user.bepretty]
+	email = cristiano@bepretty.lat
+[user.tymber]
+	email = cristiano@tymber.me
+
+
 [color]
 	ui = true
 [core]
@@ -24,7 +28,7 @@
 	required = true
 	process = git-lfs filter-process
 [alias]
-	identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
+	identity = "! git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
 
 
 [includeIf "gitdir:opensoft/**"]
@@ -32,4 +36,4 @@
 [includeIf "gitdir:bepretty/**"]
 	path = ~/.my_git_conf/bepretty
 [includeIf "gitdir:tymber/**"]
-	path = ~/.my_git_conf/tyber
+	path = ~/.my_git_conf/tymber
