@@ -40,3 +40,5 @@
 	path = ~/.my_git_conf/bepretty
 [includeIf "gitdir:tymber/**"]
 	path = ~/.my_git_conf/tymber
+[gpg]
+	program = gpg

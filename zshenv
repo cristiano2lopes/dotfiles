@@ -3,8 +3,6 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export ANDROID_HOME=/Users/Cristiano/Library/Android/sdk
 
-export BEPRETTY_HEROKU_DOMAIN="heroku.bepretty"
-
 #Path
 OLD_PATH=$PATH
 pathdirstoadd=(
@@ -12,6 +10,7 @@ pathdirstoadd=(
     /usr/local/bin
     /usr/local/sbin
     /usr/local/opt/mongodb-community@3.6/bin
+    /usr/local/Cellar/libpq/12.4/bin
     $ANDROID_HOME/platform-tools
     $ANDROID_HOME/emulator
     $ANDROID_HOME/tools
@@ -34,7 +33,7 @@ source ~/.my_zsh/projects.zsh
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
-export FZF_DEFAULT_OPTS='-m --height 50% --border'
+export FZF_DEFAULT_OPTS='-m --height 40% --border'
 export FZF_ALT_C_COMMAND='find . -maxdepth 1 -type d'
 
 source /usr/local/opt/asdf/asdf.sh

@@ -8,7 +8,6 @@
  Plug 'sheerun/vim-polyglot'
 
  Plug 'tpope/vim-fugitive'
- Plug 'tpope/vim-sleuth'
  Plug 'ludovicchabant/vim-gutentags'
  Plug 'dense-analysis/ale'
 
@@ -40,7 +39,7 @@ set wildmode=list:longest,full
 set wildignorecase
 set scrolloff=5
 set showcmd
-set showmode
+set noshowmode
 set laststatus=2
 set number
 set numberwidth=4
@@ -56,7 +55,6 @@ else
 endif
 nnoremap <Leader>dd :set background=dark<Cr>
 nnoremap <Leader>ll :set background=light<Cr>
-nmap <leader>ii :set list!<CR>
 "}}} 
 "Section Folding {{{
 set foldmethod=indent
@@ -84,23 +82,18 @@ set ignorecase
 nnoremap / /\v
 vnoremap / /\v
 nnoremap <leader>/ :noh<cr>
-set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 " }}}
 " Section GUI{{{
 if has('gui_running')
     set guifont=Jetbrains\ Mono:h14
     let macvim_hig_shift_movement=1
+    set guioptions=
 endif
 " }}}
 "Section White Space {{{
 set autoindent
 set cindent
 set smartindent
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set list listchars=tab:»·,trail:·,nbsp:·
 " }}}
 "Section Windows {{{
 set splitright
@@ -128,18 +121,8 @@ autocmd FileType txt setlocal spell
 autocmd FileType gitcommit setlocal spell
 autocmd FileType gitcommit setlocal textwidth=80
 " }}}
-" Section Elixir {{{
-autocmd FileType elixir setlocal formatprg=mix\ format\ -
-autocmd FileType eelixir setlocal formatprg=mix\ format\ -
-" }}}
 " Section Ansible {{{
 au BufRead,BufNewFile *playbook*.yml set filetype=yaml.ansible
-" }}}
-
-" Section Explorer {{{
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_winsize = 25
 " }}}
 
 " Section  FZF {{{
@@ -148,4 +131,18 @@ nnoremap <C-e> :History<Cr>
 nnoremap <leader>mm :Marks<Cr>
 nnoremap <leader>tt :Tags<Cr>
 let g:fzf_layout = { 'window': { 'width': 0.85, 'height': 0.6 } }
+let g:fzf_preview_window = 'right:40%'
+" }}}
+" Section  Ale {{{
+nmap  <leader>ff <Plug>(ale_fix)
+let g:ale_python_isort_options='--profile black'
+let g:ale_fixers = {
+\   'python': [
+\       'black',
+\       'isort',
+\   ],
+\   'elixir': [
+\       'mix_format',
+\   ],
+\}
 " }}}
