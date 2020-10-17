@@ -13,7 +13,6 @@ files_list = [
     ("vimrc", ".vimrc"),
     ("psqlrc", ".psqlrc"),
     ("bat", ".config/bat"),
-    ("starship", ".config/starship.toml"),
     ("vim", ".vim"),
 ]
 

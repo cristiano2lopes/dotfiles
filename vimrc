@@ -4,6 +4,7 @@
  Plug 'altercation/vim-colors-solarized'
  Plug 'itchyny/lightline.vim'
  Plug 'junegunn/goyo.vim'
+ Plug 'editorconfig/editorconfig-vim'
 
  Plug 'sheerun/vim-polyglot'
 
@@ -28,6 +29,7 @@ runtime macros/matchit.vim
 
 "Section UI {{{
 "
+let mapleader = " "
 colorscheme solarized
 set lazyredraw
 set ttyfast
@@ -135,14 +137,30 @@ let g:fzf_preview_window = 'right:40%'
 " }}}
 " Section  Ale {{{
 nmap  <leader>ff <Plug>(ale_fix)
+let g:ale_linters_explicit = 1
+
+let g:ale_linters = {}
+let g:ale_linters.python = ['flake8']
+let g:ale_linters.yaml = ['yamllint']
+let g:ale_linters.javascript = ['eslint']
+let g:ale_linters.typescript = ['tsserver']
+let g:ale_linters.css = ['csslint']
+let g:ale_linters.html = ['htmllint']
+
+let g:ale_fixers = {}
+let g:ale_fixers.python = ['black', 'isort']
+let g:ale_fixers.javascript = ['prettier']
+let g:ale_fixers.json = ['prettier']
+let g:ale_fixers.markdown = ['prettier']
+let g:ale_fixers.yaml = ['prettier']
+let g:ale_fixers.css = ['prettier']
+let g:ale_fixers.scss = ['prettier']
+let g:ale_fixers.jsx = ['prettier']
+let g:ale_fixers.typescript = ['prettier']
+let g:ale_fixers.html = ['prettier']
+
 let g:ale_python_isort_options='--profile black'
-let g:ale_fixers = {
-\   'python': [
-\       'black',
-\       'isort',
-\   ],
-\   'elixir': [
-\       'mix_format',
-\   ],
-\}
 " }}}
+"
+set exrc
+set secure

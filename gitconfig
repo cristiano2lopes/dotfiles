@@ -3,15 +3,6 @@
 	name = Cristiano Lopes
 	email = e.mail@cristianolopes.eu
 	signingkey = 452F95485B9E4C6E
-[user.work]
-	email = work@cristianolopes.eu
-[user.opensoft]
-	email = crlopes@opensoft.pt
-[user.bepretty]
-	email = cristiano@bepretty.lat
-[user.tymber]
-	email = cristiano@tymber.me
-
 
 [color]
 	ui = true
@@ -28,10 +19,10 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
-[alias]
-	identity = "! git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
 [commit]
 	gpgsign = true
+[gpg]
+	program = gpg
 
 
 [includeIf "gitdir:opensoft/**"]
@@ -40,5 +31,5 @@
 	path = ~/.my_git_conf/bepretty
 [includeIf "gitdir:tymber/**"]
 	path = ~/.my_git_conf/tymber
-[gpg]
-	program = gpg
+[includeIf "gitdir:prototipo/**"]
+	path = ~/.my_git_conf/endlessloop
