@@ -123,7 +123,6 @@ punctualPrompt () {
 
 
 punctualBuildTheme () {
-    punctualNewline;
     echo -n '';
     if [[ ${PUNCTUAL_SHOW_TIMESTAMP} = true ]]; then
         punctualTimestamp;
