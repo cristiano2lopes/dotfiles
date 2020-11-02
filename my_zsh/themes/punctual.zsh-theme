@@ -128,11 +128,6 @@ punctualBuildTheme () {
         punctualTimestamp;
         echo -n ' ';
     fi;
-    if [[ ${PUNCTUAL_SHOW_USER} = true ]]; then
-        punctualUser;
-        punctualHostname;
-        echo -n ' ';
-    fi;
     if [[ ${PUNCTUAL_SHOW_CURRENT_DIR} = true ]]; then
         punctualCurrentDir;
         echo -n ' ';

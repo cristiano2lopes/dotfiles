@@ -132,8 +132,6 @@ nnoremap <C-p> :Files<Cr>
 nnoremap <C-e> :History<Cr>
 nnoremap <leader>mm :Marks<Cr>
 nnoremap <leader>tt :Tags<Cr>
-let g:fzf_layout = { 'window': { 'width': 0.85, 'height': 0.6 } }
-let g:fzf_preview_window = 'right:40%'
 " }}}
 " Section  Ale {{{
 nmap  <leader>ff <Plug>(ale_fix)

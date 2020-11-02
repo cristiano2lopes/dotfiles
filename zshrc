@@ -31,7 +31,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_CUSTOM=~/.my_zsh
 ZSH_THEME="punctual"
-plugins=(direnv git docker docker-compose fzf gpg-agent heroku httpie vi-mode)
+plugins=(direnv git docker docker-compose gpg-agent heroku httpie vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,6 +65,6 @@ source ~/.asdf/plugins/java/set-java-home.zsh
 # fzf
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
-export FZF_DEFAULT_OPTS='-m --height 40% --border'
-export FZF_ALT_C_COMMAND='find . -maxdepth 1 -type d'
-
+export FZF_DEFAULT_OPTS='-m'
+export FZF_ALT_C_COMMAND='fd . -type d'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

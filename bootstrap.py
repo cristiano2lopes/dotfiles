@@ -14,6 +14,7 @@ files_list = [
     ("psqlrc", ".psqlrc"),
     ("bat", ".config/bat"),
     ("vim", ".vim"),
+    ("gpg-agent.conf", ".gnupg/gpg-agent.conf"),
 ]
 
 for s, d in files_list:

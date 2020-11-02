@@ -33,3 +33,5 @@
 	path = ~/.my_git_conf/tymber
 [includeIf "gitdir:prototipo/**"]
 	path = ~/.my_git_conf/endlessloop
+[tag]
+	forceSignAnnotated = true
