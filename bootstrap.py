@@ -12,9 +12,9 @@ files_list = [
     ("my_zsh", ".my_zsh"),
     ("vimrc", ".vimrc"),
     ("psqlrc", ".psqlrc"),
-    ("bat", ".config/bat"),
     ("vim", ".vim"),
-    ("gpg-agent.conf", ".gnupg/gpg-agent.conf"),
+    ("gpg-agent", ".gnupg"),
+    ("asdfrc", ".asdfrc"),
 ]
 
 for s, d in files_list:

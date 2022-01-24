@@ -3,17 +3,14 @@
 
  Plug 'altercation/vim-colors-solarized'
  Plug 'itchyny/lightline.vim'
- Plug 'junegunn/goyo.vim'
  Plug 'editorconfig/editorconfig-vim'
 
  Plug 'sheerun/vim-polyglot'
 
  Plug 'tpope/vim-fugitive'
  Plug 'ludovicchabant/vim-gutentags'
- Plug 'dense-analysis/ale'
 
  Plug 'rizzatti/dash.vim'
- Plug 'wakatime/vim-wakatime'
 
  Plug 'junegunn/fzf'
  Plug 'junegunn/fzf.vim'
@@ -87,7 +84,7 @@ nnoremap <leader>/ :noh<cr>
 " }}}
 " Section GUI{{{
 if has('gui_running')
-    set guifont=Jetbrains\ Mono:h14
+    set guifont=Monaco:h14
     let macvim_hig_shift_movement=1
     set guioptions=
 endif
@@ -133,32 +130,5 @@ nnoremap <C-e> :History<Cr>
 nnoremap <leader>mm :Marks<Cr>
 nnoremap <leader>tt :Tags<Cr>
 " }}}
-" Section  Ale {{{
-nmap  <leader>ff <Plug>(ale_fix)
-let g:ale_linters_explicit = 1
-
-let g:ale_linters = {}
-let g:ale_linters.python = ['flake8']
-let g:ale_linters.yaml = ['yamllint']
-let g:ale_linters.javascript = ['eslint']
-let g:ale_linters.typescript = ['tsserver']
-let g:ale_linters.css = ['csslint']
-let g:ale_linters.html = ['htmllint']
-
-let g:ale_fixers = {}
-let g:ale_fixers.python = ['black', 'isort']
-let g:ale_fixers.javascript = ['prettier']
-let g:ale_fixers.json = ['prettier']
-let g:ale_fixers.markdown = ['prettier']
-let g:ale_fixers.yaml = ['prettier']
-let g:ale_fixers.css = ['prettier']
-let g:ale_fixers.scss = ['prettier']
-let g:ale_fixers.jsx = ['prettier']
-let g:ale_fixers.typescript = ['prettier']
-let g:ale_fixers.html = ['prettier']
-
-let g:ale_python_isort_options='--profile black'
-" }}}
-"
 set exrc
 set secure

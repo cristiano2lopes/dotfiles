@@ -18,3 +18,5 @@ __pycache__/
 *.so
 
 vim/.netrwhist
+gpg-agent/*
+!gpg-agent/gpg-agent.conf

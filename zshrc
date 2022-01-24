@@ -1,12 +1,20 @@
+if [ "$(uname -p)" = "i386" ]; then
+  echo "Running in i386 mode (Rosetta)"
+  eval "$(/usr/local/homebrew/bin/brew shellenv)"
+  alias brew='/usr/local/homebrew/bin/brew'
+else
+  echo "Running in ARM mode (M1)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  alias brew='/opt/homebrew/bin/brew'
+fi
+
 # path
 
 OLD_PATH=$PATH
 pathdirstoadd=(
-    /usr/local/heroku/bin
-    /usr/local/bin
-    /usr/local/sbin
-    /usr/local/opt/mongodb-community@3.6/bin
-    /usr/local/Cellar/libpq/13.0/bin
+    $HOMEBREW_PREFIX/heroku/bin
+    $HOMEBREW_PREFIX/bin
+    $HOMEBREW_PREFIX/sbin
     $ANDROID_HOME/platform-tools
     $ANDROID_HOME/emulator
     $ANDROID_HOME/tools
@@ -21,9 +29,9 @@ for dir in $pathdirstoadd; do
 done
 
 export PATH=$PATH_TO_PREPEND$OLD_PATH
-export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="$HOMEBREW_PREFIX/man:$MANPATH"
 
-FPATH=/usr/local/share/zsh/site-functions:$FPATH
+FPATH=$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH
 
 # oh-my-zsh
 
@@ -31,7 +39,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_CUSTOM=~/.my_zsh
 ZSH_THEME="punctual"
-plugins=(direnv git docker docker-compose gpg-agent heroku httpie vi-mode)
+plugins=(git docker gpg-agent vi-mode heroku)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -43,7 +51,7 @@ export EDITOR="vim"
 
 # syntax 
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pipx 
 
@@ -59,12 +67,12 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # asdf
 
-source /usr/local/opt/asdf/asdf.sh
+source $HOMEBREW_PREFIX/opt/asdf/asdf.sh
 source ~/.asdf/plugins/java/set-java-home.zsh
 
 # fzf
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 export FZF_DEFAULT_OPTS='-m'
-export FZF_ALT_C_COMMAND='fd . -type d'
+
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
