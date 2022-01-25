@@ -8,6 +8,10 @@ else
   alias brew='/opt/homebrew/bin/brew'
 fi
 
+# android
+
+export ANDROID_HOME=/Users/Cristiano/Library/Android/sdk
+
 # path
 
 OLD_PATH=$PATH
@@ -56,10 +60,6 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # pipx 
 
 eval "$(register-python-argcomplete pipx)"
-
-# android
-
-export ANDROID_HOME=/Users/Cristiano/Library/Android/sdk
 
 # elixir
 

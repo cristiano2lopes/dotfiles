@@ -8,7 +8,6 @@
  Plug 'sheerun/vim-polyglot'
 
  Plug 'tpope/vim-fugitive'
- Plug 'ludovicchabant/vim-gutentags'
 
  Plug 'rizzatti/dash.vim'
 
